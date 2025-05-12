@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Play Dodge Creeps</title>
+  <style>
+    body {
+      background-color: #000;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    button {
+      padding: 1rem 2rem;
+      font-size: 1.5rem;
+      background-color: #333;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+
+    button:hover {
+      background-color: #555;
+    }
+  </style>
+</head>
+<body>
+  <button onclick="openGame()">Play Game</button>
+
+  <script>
+    function openGame() {
+      const gameWindow = window.open(
+        'game.html',               // The game file
+        'DodgeCreepsGame',         // Window name
+        'width=480,height=720,resizable=no' // Fixed size
+      );
+
+      if (!gameWindow) {
+        alert('Popup blocked! Please allow popups for this site.');
+      }
+    }
+  </script>
+</body>
+</html>
